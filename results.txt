@@ -1,0 +1,21 @@
+Task A (Sequence):
+-4.0
+8.0
+-21.333333333333332
+64.0
+-204.8
+682.6666666666666
+
+Task B (Product):
+Pn = 0.3333333333333333
+
+Task C (Determinant):
+Determinant = 100000.0
+
+Task D (Sum):
+Sn = 3.4166666666666665
+
+Task E (cosh via series):
+Series result: 10.066495535714285
+math.cosh: 10.06766199577765
+Difference: 0.0011664600634802014
