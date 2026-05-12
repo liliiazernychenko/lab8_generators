@@ -1,15 +1,20 @@
-def recursive_det(prev, x):
-    return prev * (1 + x ** 2)
-
-def diagonal_generator(n, x):
-    for _ in range(n):
-        yield 1 + x ** 2
-
 def determinant(n, x):
-    det = 1
-    for value in diagonal_generator(n, x):
-        det = recursive_det(det, x)
-    return det
+    if n == 0:
+        return 1
+
+    if n == 1:
+        return 1 + x**2
+
+    d0 = 1
+    d1 = 1 + x**2
+
+    for _ in range(2, n + 1):
+        d2 = (1 + x**2) * d1 - x**2 * d0
+        d0 = d1
+        d1 = d2
+
+    return d1
+
 
 def main():
     n = int(input("Enter n: "))
